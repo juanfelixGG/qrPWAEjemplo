@@ -1,0 +1,26 @@
+<div [formGroup]="form" (ngSubmit)="submitForm()">
+    <ion-item>
+        <ion-label position="stacked">Para (separados por coma)</ion-label>
+        <ion-input type="text" formControlName="to"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Copia (separados por coma)</ion-label>
+        <ion-input type="text" formControlName="cc"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Oculto (separados por coma)</ion-label>
+        <ion-input type="text" formControlName="bcc"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Asunto</ion-label>
+        <ion-input type="text" formControlName="subject"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Cuerpo</ion-label>
+        <ion-textarea formControlName="body"></ion-textarea>
+    </ion-item>
+</div>

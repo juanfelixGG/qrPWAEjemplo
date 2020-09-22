@@ -1,0 +1,66 @@
+<div [formGroup]="form" (ngSubmit)="submitForm()">
+    <ion-item>
+        <ion-label position="stacked">Contacto</ion-label>
+        <ion-input required="true" type="text" formControlName="displayName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input type="text" formControlName="firstName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Apellidos</ion-label>
+        <ion-input type="text" formControlName="lastName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Número móvil</ion-label>
+        <ion-input type="tel" formControlName="mobile"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Número fijo</ion-label>
+        <ion-input type="tel" formControlName="phone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Web</ion-label>
+        <ion-input type="url" formControlName="website"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Fecha nacimiento</ion-label>
+        <ion-input type="date" formControlName="birthDay"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Notas</ion-label>
+        <ion-textarea formControlName="firstName"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Telefono trabajo</ion-label>
+        <ion-input type="tel" formControlName="workPhone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Email trabajo</ion-label>
+        <ion-input type="email" formControlName="workEmail"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Compañia</ion-label>
+        <ion-input type="text" formControlName="company"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="stacked">Puesto</ion-label>
+        <ion-input type="text" formControlName="job"></ion-input>
+    </ion-item>
+</div>

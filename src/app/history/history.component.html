@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+        <ion-buttons slot="secondary">
+            <app-qr-list-sort-button (sortTypeChanged)="loadHistory($event)"></app-qr-list-sort-button>
+        </ion-buttons>
+        <ion-buttons slot="secondary">
+            <ion-button routerLink="/tabs/about">
+                <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">Historial</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ng-container *ngIf="history">
+        <app-qr-list [codes]="history" [showDelete]="true" (deleteQr)="deleteQr($event)"></app-qr-list>
+    </ng-container>
+</ion-content>

@@ -1,0 +1,241 @@
+<ion-list *ngIf="qr">
+    <ion-item *ngIf="contact.displayName && contact.displayName !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Contacto</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.displayName}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.firstName && contact.firstName !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Nombre</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.firstName}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.lastName && contact.lastName !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Apellido</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.lastName}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.mobile && contact.mobile !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Móvil</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.mobile}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.phone && contact.phone !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Fijo</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.phone}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.fax && contact.fax !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Fax</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.fax}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.workPhone && contact.workPhone !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Telefono trabajo</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.workPhone}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.email && contact.email !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Email</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.email}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.workEmail && contact.workEmail !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Email trabajo</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.workEmail}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.company && contact.company !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Compañia</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.company}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.job && contact.job !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Puesto</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.job}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.homeAddress">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Dirección casa</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.homeAddress.toString()}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.workAddress">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Dirección trabajo</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.workAddress.toString()}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.website && contact.website !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Web</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text"><a href="{{contact.website}}">{{contact.website}}</a></ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.notes && contact.lastName !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Notas</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.notes}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-item *ngIf="contact.birthDay && contact.birthDay !== ''">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-title class="details-title">Cumpleaños</ion-title>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-text class="details-text">{{contact.birthDay}}</ion-text>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+</ion-list>

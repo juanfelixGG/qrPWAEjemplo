@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon name="arrow-back-sharp"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="secondary" *ngIf="qr">
+            <ion-button (click)="toggleFavorite()">
+                <ion-icon slot="icon-only" [name]="qr.favorite ? 'star' : 'star-outline'"></ion-icon>
+            </ion-button>
+            <ion-button routerLink="/tabs/about">
+                <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center"><span *ngIf="qr">{{qr.actionType}}</span></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ng-container *ngIf="qr">
+        <ng-container [ngSwitch]="qr.actionType">
+            <app-contact-details *ngSwitchCase="ActionType.CONTACT" [qr]="qr"></app-contact-details>
+            <app-mail-details *ngSwitchCase="ActionType.EMAIL" [qr]="qr"></app-mail-details>
+            <app-sms-details *ngSwitchCase="ActionType.SMS" [qr]="qr"></app-sms-details>
+            <app-event-details *ngSwitchCase="ActionType.EVENT" [qr]="qr"></app-event-details>
+            <app-phone-details *ngSwitchCase="ActionType.PHONE" [qr]="qr"></app-phone-details>
+            <app-text-details *ngSwitchCase="ActionType.TEXT" [qr]="qr"></app-text-details>
+            <app-wifi-details *ngSwitchCase="ActionType.WIFI" [qr]="qr"></app-wifi-details>
+            <app-url-details *ngSwitchCase="ActionType.URL" [qr]="qr"></app-url-details>
+        </ng-container>
+    </ng-container>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-grid>
+            <ion-row>
+                <ion-col *ngIf="qr && qr.actionType !== ActionType.TEXT && qr.actionType !== ActionType.WIFI">
+                    <ion-button expand="block" (click)="preformAction(qr)">
+                        <ion-icon icon="{{getIcon(qr)}}" slot="start"></ion-icon>
+                        {{getButtonText(qr.actionType)}}
+                    </ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button expand="block" color="tertiary" (click)="showQRCode()">
+                        <ion-icon icon="qr-code-sharp" slot="start"></ion-icon>
+                        Mostrar QR
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+
+    </ion-toolbar>
+</ion-footer>

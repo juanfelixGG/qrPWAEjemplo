@@ -1,0 +1,105 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.details-title {
+  padding-left: 0;
+  text-align: left;
+}
+
+.details-text {
+  margin-left: 25px;
+  color: #6c757d;
+}
+
+.details-text-with-line-breaks {
+  white-space: pre-wrap;
+}
+
+.action-buttons {
+  position: fixed;
+  left: 0;
+  bottom: 10px;
+  right: 0;
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10,10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+  }
+
+  &:active:after {
+    transform: scale(0,0);
+    opacity: .2;
+    transition: 0s;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@for $i from 1 through 5 {
+  $m: $i * 1em;
+  .ml-#{$i} {
+    margin-left: $m;
+  }
+
+  .mr-#{$i} {
+    margin-right: $m;
+  }
+
+
+  .mt-#{$i} {
+    margin-top: $m;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: $m;
+  }
+}
+
+.ml-5 {
+  margin-left: 5em;
+}
